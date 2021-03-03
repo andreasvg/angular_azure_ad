@@ -1,0 +1,11 @@
+<h1>Values</h1>
+
+<div id="buttons-row">
+    <button (click)="showPublicValues()">Public</button>
+    <button (click)="showSignedInValues()">Signed In</button>
+    <button (click)="showAdminValues()">Admin</button>
+</div>
+
+<ul>
+    <li *ngFor="let value of values">{{ value }}</li>
+</ul>

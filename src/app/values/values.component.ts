@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ApiService } from '../api.service';
+import { IUserDetails } from '../models/IUserDetails';
 
 @Component({
   selector: 'app-values',
@@ -8,6 +9,7 @@ import { ApiService } from '../api.service';
 })
 export class ValuesComponent implements OnInit {
   public values: string[] = [];
+  public userDetails: IUserDetails | null = null;
 
   constructor(private apiService: ApiService) { }
 
@@ -30,5 +32,11 @@ export class ValuesComponent implements OnInit {
     this.values = [];
 
     this.apiService.getAdminValues().subscribe(values => this.values = values);
-  }  
+  }
+  
+  public showUserGroups(): void {
+    this.userDetails = null;
+
+    this.apiService.getUserDetails().subscribe(userDetails => this.userDetails = userDetails);
+  }
 }

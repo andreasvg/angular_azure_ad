@@ -15,6 +15,11 @@ urlFragment: "ms-identity-javascript-angular-spa"
 
 This sample demonstrates how to use MSAL Angular v2 to login, logout, conditionally render components to authenticated users, and acquire an access token for a protected resource such as Microsoft Graph.
 
+## Running the API
+The example API has been containerised and may be started using the docker-compose file:
+
+docker-compose up
+
 ## Features
 
 This sample demonstrates the following MSAL Angular concepts:

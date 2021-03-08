@@ -3,6 +3,6 @@ version: '3'
 services:
     api:
         image: andreasvg/azure-ad-api
-        container_name: azre-ad-api
+        container_name: azure-ad-api
         ports:
             - "49998:5000"

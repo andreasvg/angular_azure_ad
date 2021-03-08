@@ -37,6 +37,7 @@ export function MSALInterceptorConfigFactory(): MsalInterceptorConfiguration {
   protectedResourceMap.set('https://graph.microsoft.com/v1.0/me', ['user.read']);
   protectedResourceMap.set('http://localhost:49998/api/signedin/values', ['api://f3e93275-fd60-4369-911f-4811d6484c92/SignedIn.Read']);
   protectedResourceMap.set('http://localhost:49998/api/admin/*', ['api://f3e93275-fd60-4369-911f-4811d6484c92/SignedIn.Read']);
+  protectedResourceMap.set('http://localhost:49998/api/users/*', ['api://f3e93275-fd60-4369-911f-4811d6484c92/SignedIn.Read']);
 
   return {
     interactionType: InteractionType.Redirect,
